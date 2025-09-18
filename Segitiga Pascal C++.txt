@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    int pascal[N][N];
+    for (int I = 0; I <= N; I++) {
+        pascal[I][0] = 1;
+        for (int J = 1; J <= I; J++) {
+            if (J == I) pascal[I][J] = 1;
+            else pascal[I][J] = pascal[I - 1][J - 1] + pascal[I - 1][J];
+        }
+    }
+    for (int I = 0; I < N; I++) {
+        for (int J = 0; J <= I; J++) {
+            cout<<pascal[I][J]<<" ";
+        }
+        cout<<"\n";
+    }
+
+    return 0;
+}
