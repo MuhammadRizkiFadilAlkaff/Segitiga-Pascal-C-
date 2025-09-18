@@ -1,1 +1,0 @@
-# Segitiga-Pascal-C-
